@@ -3,27 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/drawable/custom_edit_text.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/drawable/custom_imageview.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/drawable/edit.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/drawable/notifications.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/drawable/procedures.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/drawable/profile.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/activity_cadastro.xml" value="0.22" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/activity_profile.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/activity_profile.xml" value="0.22" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/agendamento_default.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/bottom_navigation_default.xml" value="0.1" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/button_save_changes.xml" value="0.165625" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/custom_button.xml" value="0.10099637681159421" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/custom_delete_button.xml" value="0.1" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/custom_edit_text.xml" value="0.165625" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/custom_imageview.xml" value="0.1" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/custom_title.xml" value="0.10099637681159421" />
-        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/fragment_about_us.xml" value="0.1" />
-        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/fragment_agendamentos.xml" value="0.1" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/fragment_about_us.xml" value="0.22" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/fragment_agendamentos.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/fragment_agendar_horario.xml" value="0.22" />
-        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/fragment_notificacoes.xml" value="0.1" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/fragment_notificacoes.xml" value="0.22" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/fragment_profile.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/notificacoes_default.xml" value="0.22" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/layout/spinner_item.xml" value="0.1" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/menu/item_menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/55519/AndroidStudioProjects/ProjetoPDM/app/src/main/res/xml/item_navbar.xml" value="0.1" />
       </map>
     </option>

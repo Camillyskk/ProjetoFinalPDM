@@ -23,4 +23,46 @@
     <string name="esfolia_o">Esfoliação</string>
     <string name="esfoliacao">Esfoliacao</string>
     <string name="agendar_hor_rio">Agendar Horário</string>
+    <string name="single_line_draw">single line draw</string>
+    <string name="notificacoes">Notificacoes</string>
+    <string name="sobre_n_s">Sobre Nós</string>
+    <string name="sobe_o_aplicativo">Sobe o Aplicativo:</string>
+    <string name="sobre_o_aplicativo">Sobre o Aplicativo:</string>
+    <string name="descricao">O objetivo deste aplicativo é auxiliar empreendedores no gerenciamento de tempo e de clientes. Pensando nisso, idealizamos um aplicativo focado para empreendedores prestadores de serviço, onde ele terá acesso a lista de clientes e funcionários, agenda da empresa e lista de serviços disponíveis em um só lugar, sem precisar de um aplicativo para cada coisa.</string>
+    <string name="atualizar_dados">atualizar dados</string>
+
+    <string-array name="procedimentos">
+        <item>Limpeza de Pele</item>
+        <item>Pintura Cabelo</item>
+        <item>Descoloração</item>
+        <item>Depilação</item>
+        <item>Corte</item>
+        <item>Escova</item>
+        <item>Manicure</item>
+        <item>Pedicure</item>
+        <item>Maquiagem</item>
+    </string-array>
+
+    <string-array name="horarios">
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+    </string-array>
 </resources>

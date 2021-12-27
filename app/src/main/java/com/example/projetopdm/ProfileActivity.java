@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -19,6 +20,9 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        //iniciar na fragment profile
+        getSupportFragmentManager().beginTransaction().replace(R.id.body_container, new ProfileFragment()).commit();
 
         navigationView = findViewById(R.id.bottomNavigation);
 
@@ -49,5 +53,7 @@ public class ProfileActivity extends AppCompatActivity {
                 return true;
             }
         });
+
     }
+
 }

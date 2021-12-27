@@ -1,12 +1,22 @@
 package com.example.projetopdm;
 
+import static com.example.projetopdm.CadastroActivity.validarCidade;
+import static com.example.projetopdm.CadastroActivity.validarEmail;
+import static com.example.projetopdm.CadastroActivity.validarSenha;
+import static com.example.projetopdm.CadastroActivity.validarTelefone;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +24,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
+
+    EditText et_email, et_senha, et_telefone, et_cidade;
+    ImageButton edit_email, edit_senha, edit_telefone, edit_cidade;
+    Button bt_atualizar;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +74,77 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View v = inflater.inflate(R.layout.fragment_profile, container, false);
+        //EditTexts com os dados
+        et_email = v.findViewById(R.id.email);
+        et_senha = v.findViewById(R.id.senha);
+        et_telefone = v.findViewById(R.id.telefone);
+        et_cidade = v.findViewById(R.id.cidade);
+
+        //Botoes para editar
+        edit_email = v.findViewById(R.id.editar_email);
+        edit_senha = v.findViewById(R.id.editar_senha);
+        edit_telefone = v.findViewById(R.id.editar_telefone);
+        edit_cidade = v.findViewById(R.id.editar_cidade);
+
+        bt_atualizar = v.findViewById(R.id.atualizar);
+
+        disableEditText(et_email);
+        disableEditText(et_senha);
+        disableEditText(et_telefone);
+        disableEditText(et_cidade);
+
+        edit_email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ableEditText(et_email);
+            }
+        });
+
+        edit_senha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ableEditText(et_senha);
+            }
+        });
+
+        edit_telefone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ableEditText(et_telefone);
+            }
+        });
+
+        edit_cidade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ableEditText(et_cidade);
+            }
+        });
+
+        bt_atualizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                validarEmail(et_email);
+                validarSenha(et_senha);
+                validarTelefone(et_telefone);
+                validarCidade(et_cidade);
+
+            }
+        });
+
+
+        return v;
     }
+
+
+
+    public void disableEditText(EditText editText){
+        editText.setEnabled(false);
+    }
+
+    public void ableEditText(EditText editText){
+        editText.setEnabled(true);
+    }
+
 }
