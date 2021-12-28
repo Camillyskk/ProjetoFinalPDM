@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/adm_profile"
+        android:title="Perfil"
+        android:icon="@drawable/profile"/>
+
+    <item android:id="@+id/adm_clientes"
+        android:title="Clientes"
+        android:icon="@drawable/funcionarios"/>
+
+    <item android:id="@+id/agendamentos"
+        android:title="@string/agendamentos"
+        android:icon="@drawable/procedures"/>
+</menu>

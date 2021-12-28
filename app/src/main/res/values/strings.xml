@@ -30,6 +30,18 @@
     <string name="sobre_o_aplicativo">Sobre o Aplicativo:</string>
     <string name="descricao">O objetivo deste aplicativo é auxiliar empreendedores no gerenciamento de tempo e de clientes. Pensando nisso, idealizamos um aplicativo focado para empreendedores prestadores de serviço, onde ele terá acesso a lista de clientes e funcionários, agenda da empresa e lista de serviços disponíveis em um só lugar, sem precisar de um aplicativo para cada coisa.</string>
     <string name="atualizar_dados">atualizar dados</string>
+    <string name="clientes">Clientes</string>
+    <string name="joao_paralepipedo">Joao Paralepipedo</string>
+    <string name="funcion_rios">Funcionários</string>
+    <string name="novo_funcion_rio">novo funcionário</string>
+    <string name="procedimentos">Procedimentos</string>
+    <string name="novo_procedimento">novo procedimento</string>
+    <string name="criar_procedimento">Criar Procedimento</string>
+    <string name="nome_do_procedimento">Nome do Procedimento</string>
+    <string name="dura_o">Duração</string>
+    <string name="criar">Criar</string>
+    <string name="valor">Valor</string>
+    <string name="agendamentos">Agendamentos</string>
 
     <string-array name="procedimentos">
         <item>Limpeza de Pele</item>
