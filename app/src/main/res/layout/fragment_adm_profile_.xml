@@ -181,5 +181,12 @@
         android:id="@+id/editar_cidade"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/atualizar_dados"
+        android:background="@android:color/transparent"
+        android:id="@+id/atualizar"/>
+
 
 </FrameLayout>

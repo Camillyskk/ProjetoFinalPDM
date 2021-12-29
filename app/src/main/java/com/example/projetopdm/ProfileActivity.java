@@ -6,10 +6,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.example.projetopdm.usuarios.Cliente;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -47,6 +50,7 @@ public class ProfileActivity extends AppCompatActivity {
                         fragment = new AboutUsFragment();
                         break;
                 }
+
                 getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
 //                navigationView.setSelectedItemId(profile_item); //tava comentado, se der tilt, comenta de novo
 

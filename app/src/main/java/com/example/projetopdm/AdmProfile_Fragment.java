@@ -16,6 +16,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.example.projetopdm.clinica.Agenda;
+import com.example.projetopdm.usuarios.Adm;
+import com.example.projetopdm.usuarios.Cliente;
+import com.example.projetopdm.usuarios.Usuario;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link AdmProfile_Fragment#newInstance} factory method to
@@ -122,10 +127,9 @@ public class AdmProfile_Fragment extends Fragment {
         bt_atualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validarEmail(et_email);
-                validarSenha(et_senha);
-                validarTelefone(et_telefone);
-                validarCidade(et_cidade);
+                if(isDadosValidos()) {
+                    disableAll();
+                }
 
             }
         });
@@ -134,11 +138,40 @@ public class AdmProfile_Fragment extends Fragment {
         return v;
     }
 
+    public void setInfoProfile(Adm adm){
+        int posicao = 0;
+        for(Usuario admProcurado : Agenda.listaAdm){
+            if(admProcurado.getEmail() == adm.getEmail()){
+                posicao = Agenda.listaAdm.indexOf(adm);
+            }
+        }
+        et_email.setText(Agenda.listaAdm.get(posicao).getEmail());
+        et_senha.setText(Agenda.listaAdm.get(posicao).getSenha());
+        et_telefone.setText(Agenda.listaAdm.get(posicao).getTelefone());
+        et_cidade.setText(Agenda.listaAdm.get(posicao).getCidade());
+        //ajustar pra puxar os dados do banco
+    }
+
+
     public void disableEditText(EditText editText){
         editText.setEnabled(false);
     }
 
     public void ableEditText(EditText editText){
         editText.setEnabled(true);
+    }
+
+    public void disableAll (){
+        disableEditText(et_email);
+        disableEditText(et_senha);
+        disableEditText(et_cidade);
+        disableEditText(et_telefone);
+    }
+
+    public boolean isDadosValidos(){
+        if(validarEmail(et_email) && validarSenha(et_senha) && validarTelefone(et_telefone) && validarCidade(et_cidade)){
+            return true;
+        }
+        return false;
     }
 }

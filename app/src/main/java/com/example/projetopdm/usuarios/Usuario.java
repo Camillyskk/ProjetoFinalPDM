@@ -1,12 +1,13 @@
-//package com.example.projetopdm.usuarios;
-//
-//public class Usuario {
-//    public String nomeUsuario;
-//    private String senha;
-//    public String nome;
-//    public String email;
-//    public String telefone;
-//    public static Scanner leitor = new Scanner(System.in);
+package com.example.projetopdm.usuarios;
+
+public class Usuario {
+    private String senha;
+    public String nome;
+    public String sobrenome;
+    public String email;
+    public String telefone;
+
+    //    public static Scanner leitor = new Scanner(System.in);
 //
 //    public static void gerente(String option) {
 //        switch (option) {
@@ -145,45 +146,45 @@
 //    }
 //
 //    // SETTERS
-//    public void setNome(String nome) {
-//        this.nome = nome;
-//    }
-//
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
-//
-//    public void setNomeUsuario(String nomeUsuario) {
-//        this.nomeUsuario = nomeUsuario;
-//    }
-//
-//    public void setSenha(String senha) {
-//        this.senha = senha;
-//    }
-//
-//    public void setTelefone(String telefone) {
-//        this.telefone = telefone;
-//    }
-//
-//    // GETTERS
-//    public String getNome() {
-//        return nome;
-//    }
-//
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public String getNomeUsuario() {
-//        return nomeUsuario;
-//    }
-//
-//    public String getSenha() {
-//        return senha;
-//    }
-//
-//    public String getTelefone() {
-//        return telefone;
-//    }
-//
-//}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    // GETTERS
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+}

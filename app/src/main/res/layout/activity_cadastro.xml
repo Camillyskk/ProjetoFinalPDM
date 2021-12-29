@@ -33,7 +33,7 @@
     </TextView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_login"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_gravity="center_vertical"

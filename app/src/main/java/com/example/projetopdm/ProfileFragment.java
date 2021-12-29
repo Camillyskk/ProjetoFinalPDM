@@ -9,14 +9,18 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.text.TextUtils;
-import android.util.Patterns;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+
+import com.example.projetopdm.clinica.Agenda;
+import com.example.projetopdm.usuarios.Cliente;
+import com.example.projetopdm.usuarios.Usuario;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -89,10 +93,14 @@ public class ProfileFragment extends Fragment {
 
         bt_atualizar = v.findViewById(R.id.atualizar);
 
-        disableEditText(et_email);
-        disableEditText(et_senha);
-        disableEditText(et_telefone);
-        disableEditText(et_cidade);
+        //Desabilitar os EditTexts
+        disableAll();
+
+        //LEMBRAR: esse fragment (ProfileFragment) é só do CLIENTE, portando tudo o que for feito aqui
+        //pode e deve ser especifico para o cliente!!
+
+
+        //Adicionando Listeners para os botoes de edição dos dados
 
         edit_email.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,19 +133,28 @@ public class ProfileFragment extends Fragment {
         bt_atualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validarEmail(et_email);
-                validarSenha(et_senha);
-                validarTelefone(et_telefone);
-                validarCidade(et_cidade);
-
+                if(isDadosValidos()) {
+                    disableAll();
+                }
             }
         });
-
 
         return v;
     }
 
-
+    public void setInfoProfile(Cliente cliente){
+        int posicao = 0;
+        for(Usuario clienteProcurado : Agenda.listaClientes){
+            if(clienteProcurado.getEmail() == cliente.getEmail()){
+                posicao = Agenda.listaClientes.indexOf(cliente);
+            }
+        }
+        et_email.setText(Agenda.listaClientes.get(posicao).getEmail());
+        et_senha.setText(Agenda.listaClientes.get(posicao).getSenha());
+        et_telefone.setText(Agenda.listaClientes.get(posicao).getTelefone());
+        et_cidade.setText(Agenda.listaClientes.get(posicao).getCidade());
+        //ajustar pra puxar os dados do banco
+    }
 
     public void disableEditText(EditText editText){
         editText.setEnabled(false);
@@ -145,6 +162,20 @@ public class ProfileFragment extends Fragment {
 
     public void ableEditText(EditText editText){
         editText.setEnabled(true);
+    }
+
+    public void disableAll (){
+        disableEditText(et_email);
+        disableEditText(et_senha);
+        disableEditText(et_cidade);
+        disableEditText(et_telefone);
+    }
+
+    public boolean isDadosValidos(){
+        if(validarEmail(et_email) && validarSenha(et_senha) && validarTelefone(et_telefone) && validarCidade(et_cidade)){
+            return true;
+        }
+        return false;
     }
 
 }

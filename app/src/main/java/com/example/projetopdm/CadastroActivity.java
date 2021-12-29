@@ -7,22 +7,22 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.text.SimpleDateFormat;
+import com.example.projetopdm.usuarios.Cliente;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
-import java.util.Date;
+
 
 public class CadastroActivity extends AppCompatActivity {
     EditText et_nome, et_sobrenome, et_email, et_telefone, et_cidade, et_dataNasc, et_RG, et_CPF, et_senha;
-    Button cadastrar;
+    Button cadastrar, login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +40,37 @@ public class CadastroActivity extends AppCompatActivity {
         et_senha = findViewById(R.id.senha);
 
         cadastrar = findViewById(R.id.cadastrar);
+        login = findViewById(R.id.bt_login);
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(i);
+
+            }
+        });
 
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
                 if(validarNome(et_nome) && validarNome(et_sobrenome) && validarRG(et_RG) && validarCPF(et_CPF) && validarDataNasc(et_dataNasc) && validarEmail(et_email) && validarTelefone(et_telefone) && validarCidade(et_cidade) && validarSenha(et_senha)){
+                   Cliente clienteNovo = new Cliente();
+                   clienteNovo.setNome(et_nome.getText().toString());
+                   clienteNovo.setSobrenome(et_sobrenome.getText().toString());
+                   clienteNovo.setEmail(et_email.getText().toString());
+                   clienteNovo.setTelefone(et_telefone.getText().toString());
+                   clienteNovo.setCidade(et_cidade.getText().toString());
+                   clienteNovo.setdataNascimento(et_dataNasc.getText().toString());
+                   clienteNovo.setRg(et_RG.getText().toString());
+                   clienteNovo.setCpf(et_CPF.getText().toString());
+                   clienteNovo.setSenha(et_senha.getText().toString());
+
+                   Cliente.cadastrar(clienteNovo);
                     Intent i = new Intent(getBaseContext(), ProfileActivity.class);
                     startActivity(i);
+
                 }
             }
         });
@@ -115,7 +138,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     public static boolean validarRG(EditText editText){
         String rg = editText.getText().toString();
-        if(!rg.matches("\\d")|| rg.length()<5){
+        if(rg.length()<5){
             editText.setError("Digite um número de RG válido.");
             return false;
         }
@@ -124,10 +147,11 @@ public class CadastroActivity extends AppCompatActivity {
 
     public static boolean validarCPF(EditText editText){
         String cpf = editText.getText().toString();
-        if(!cpf.matches("\\d")|| cpf.length()<11){
+        if(cpf.length()<11){
             editText.setError("Digite um número de CPF válido e sem os pontos.");
             return false;
         }
         return true;
     }
+
 }

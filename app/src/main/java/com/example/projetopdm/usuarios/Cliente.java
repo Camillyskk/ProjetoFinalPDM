@@ -1,74 +1,35 @@
-//package com.example.projetopdm.usuarios;
-//
-//public class Cliente {
-//    String cidade;
-//    String sobrenome;
-//    String dataNascimento;
-//    String sexoBiologico;
-//    String rg;
-//    String cpf;
-//    String remedios;
-//    private ArrayList<Agendamento> horarios = new ArrayList<>();
-//
-//    public static void cadastrar() {
-//        System.out.println("\n\nCadastro de Clientes da Clinica\n");
-//
-//        Cliente client = new Cliente();
-//
-//        System.out.println("Nome do cliente:");
-//        client.setNome(leitor.nextLine());
-//
-//        System.out.println("Sobrenome:");
-//        client.setSobrenome(leitor.nextLine());
-//
-//        System.out.println("Data de nascimento -no formato xx/xx/xxxx-:");
-//        client.setdataNascimento(leitor.nextLine());
-//
-//        System.out.println("RG:");
-//        client.setRg(leitor.nextLine());
-//
-//        System.out.println("CPF:");
-//        client.setCpf(leitor.nextLine());
-//
-//        System.out.println("Telefone:");
-//        client.setTelefone(leitor.nextLine());
-//
-//        System.out.println("Sexo biologico:");
-//        client.setSexo(leitor.nextLine());
-//
-//        System.out.println("Cidade:");
-//        client.setCidade(leitor.nextLine());
-//
-//        System.out.println("Remedios usados com frequencia:");
-//        client.setRemedios(leitor.nextLine());
-//
-//        System.out.println("Email:");
-//        client.setEmail(leitor.nextLine());
-//
-//        boolean valido = false;
-//        while(!valido){
-//            int cont = 0;
-//            System.out.println("Nome de usuario:");
-//            String addnome = leitor.nextLine();
-//            for (Usuario usuarioProcurado : Agenda.usuarios) {
-//                if (usuarioProcurado.getNomeUsuario().equals(addnome)) {
-//                    System.out.println("Esse usuário já existe, crie outro nome\n");
-//                } else{
-//                    cont++;
-//                }
-//            }
-//            if(cont == Agenda.usuarios.size()){
-//                client.setNomeUsuario(addnome);
-//                valido = true;
-//            }
-//        }
-//
-//        System.out.println("Senha:");
-//        client.setSenha(leitor.nextLine());
-//
-//        Agenda.listaClientes.add(client);
-//        Agenda.usuarios.add(client);
-//    }
+package com.example.projetopdm.usuarios;
+
+import com.example.projetopdm.clinica.Agenda;
+import com.example.projetopdm.clinica.Agendamento;
+
+import java.util.ArrayList;
+
+public class Cliente extends Usuario{
+    String cidade;
+    String dataNascimento;
+    String rg;
+    String cpf;
+
+    private ArrayList<Agendamento> horarios = new ArrayList<>();
+
+    //acho que colocar como parametro um obj cliente criado num onclick do botao cadastrar
+
+    public static void cadastrar(Cliente cliente) {
+        Cliente client = new Cliente();
+        client.setNome(cliente.nome);
+        client.setSobrenome(cliente.sobrenome);
+        client.setdataNascimento(cliente.dataNascimento);
+        client.setRg(cliente.rg);
+        client.setCpf(cliente.cpf);
+        client.setTelefone(cliente.telefone);
+        client.setCidade(cliente.cidade);
+        client.setEmail(cliente.email);
+        client.setSenha(cliente.getSenha());
+
+        Agenda.listaClientes.add(client);
+        Agenda.usuarios.add(client);
+    }
 //
 //    public static void listar() {
 //        for (int i = 0; i < Agenda.listaClientes.size(); i++) {
@@ -219,68 +180,48 @@
 //
 ////SETTER
 //
-//    public void setSobrenome(String sobrenome) {
-//        this.sobrenome = sobrenome;
-//    }
-//
-//    public void setdataNascimento(String dataNascimento) {
-//        this.dataNascimento = dataNascimento;
-//    }
-//
-//    public void setRg(String rg) {
-//        this.rg = rg;
-//    }
-//
-//    public void setCpf(String cpf) {
-//        this.cpf = cpf;
-//    }
-//
-//    public void setSexo(String sexoBiologico) {
-//        this.sexoBiologico = sexoBiologico;
-//    }
-//
-//    public void setCidade(String cidade) {
-//        this.cidade = cidade;
-//    }
-//
-//    public void setRemedios(String remedios) {
-//        this.remedios = remedios;
-//    }
-//
-//    public void setHorario(Agendamento horario) {
-//        this.horarios.add(horario);
-//    }
-//
-//    //GETTER
-//    public String getCidade() {
-//        return cidade;
-//    }
-//
-//    public String getSobrenome() {
-//        return sobrenome;
-//    }
-//
-//    public String getDataNascimento() {
-//        return dataNascimento;
-//    }
-//
-//    public String getSexo() {
-//        return sexoBiologico;
-//    }
-//
-//    public String getRg() {
-//        return rg;
-//    }
-//
-//    public String getCpf() {
-//        return cpf;
-//    }
-//
-//    public String getRemedios() {
-//        return remedios;
-//    }
-//
-//    public ArrayList<Agendamento> getHorario() {
-//        return horarios;
-//    }
-//}
+   public void setNome(String nome) {
+            this.nome = nome;
+   }
+
+    public void setdataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public void setHorario(Agendamento horario) {
+        this.horarios.add(horario);
+    }
+
+    //GETTER
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public ArrayList<Agendamento> getHorario() {
+        return horarios;
+    }
+}

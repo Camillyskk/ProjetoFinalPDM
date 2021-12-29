@@ -1,4 +1,4 @@
 package com.example.projetopdm.usuarios;
 
-public class Gerente {
+public class Gerente extends Usuario{
 }

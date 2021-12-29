@@ -1,6 +1,10 @@
-//package com.example.projetopdm.usuarios;
-//
-//public class Adm {
+package com.example.projetopdm.usuarios;
+
+import com.example.projetopdm.clinica.Agenda;
+
+public class Adm extends Usuario{
+    String cidade;
+
 //    public static void listar() {
 //        for (int i = 0; i < Agenda.listaAdm.size(); i++) {
 //            if (i == 0) {
@@ -21,41 +25,29 @@
 //            }
 //        }
 //    }
-//
-//    public static void cadastrar() {
-//        Adm administrador = new Adm();
-//
-//        boolean valido = false;
-//        while(!valido){
-//            int cont = 0;
-//            System.out.println("Nome de usuario:");
-//            String addnome = leitor.nextLine();
-//            for (Usuario usuarioProcurado : Agenda.usuarios) {
-//                if (usuarioProcurado.getNomeUsuario().equals(addnome)) {
-//                    System.out.println("Esse usuário já existe, crie outro nome\n");
-//                } else{
-//                    cont++;
-//                }
-//            }
-//            if(cont == Agenda.usuarios.size()){
-//                administrador.setNomeUsuario(addnome);
-//                valido = true;
-//            }
-//        }
-//
-//        System.out.println("Senha: ");
-//        administrador.setSenha(leitor.nextLine());
-//        System.out.println("Nome Completo: ");
-//        administrador.setNome(leitor.nextLine());
-//        System.out.println("Email: ");
-//        administrador.setEmail(leitor.nextLine());
-//        System.out.println("Telefone: ");
-//        administrador.setTelefone(leitor.nextLine());
-//
-//        Agenda.listaAdm.add(administrador);
-//        Agenda.usuarios.add(administrador);
-//    }
-//
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getCidade() { return cidade; }
+
+    public static void cadastrar(Adm adm) {
+        Adm administrador = new Adm();
+
+        administrador.setNome(adm.nome);
+        administrador.setSobrenome(adm.sobrenome);
+        administrador.setTelefone(adm.telefone);
+        administrador.setCidade(adm.cidade);
+        administrador.setEmail(adm.email);
+        administrador.setSenha(adm.getSenha());
+
+        Agenda.listaAdm.add(administrador);
+        Agenda.usuarios.add(administrador);
+    }
+
+
+
 //    public static void deletar() {
 //        listar();
 //        System.out.println("\n Digite o ID do administrador que deseja deletar:");
@@ -99,4 +91,4 @@
 //        System.out.println("Novo telefone: ");
 //        adm.setTelefone(leitor.nextLine());
 //    }
-//}
+}

@@ -131,17 +131,17 @@ public class Agendamento {
         return data;
     }
 
-    public Cliente getCliente() {
-        return cliente;
-    }
+//    public Cliente getCliente() {
+//        return cliente;
+//    }
 
     public String getProcedimento() {
         return procedimento.nome;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
+//    public void setCliente(Cliente cliente) {
+//        this.cliente = cliente;
+//    }
 
     public void setProcedimento(Procedimento procedimento) {
         this.procedimento = procedimento;
