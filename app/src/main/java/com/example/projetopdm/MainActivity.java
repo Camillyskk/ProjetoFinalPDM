@@ -1,8 +1,7 @@
 package com.example.projetopdm;
 
-import static com.example.projetopdm.clinica.Agenda.autenticarUsuario;
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,15 +16,26 @@ import com.example.projetopdm.usuarios.Cliente;
 import com.example.projetopdm.usuarios.Gerente;
 import com.example.projetopdm.usuarios.Usuario;
 
+import com.example.projetopdm.database.Conexao;
+
+
 public class MainActivity extends AppCompatActivity {
+
+    ConstraintLayout activity_main;
+
+
     EditText et_email, et_senha;
     Button bt_entrar, bt_cadastrar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        activity_main = (ConstraintLayout) findViewById(R.id.activity_main);
+        Conexao.criarConexao(activity_main, getBaseContext());
 
         bt_entrar = findViewById(R.id.entrar);
         bt_cadastrar = findViewById(R.id.bt_cadastro);
@@ -33,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         bt_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Gerente gerente = new Gerente();
                 gerente.setNome("Gerente");
                 gerente.setSobrenome("hdjkahdjkah");
@@ -74,11 +83,10 @@ public class MainActivity extends AppCompatActivity {
         bt_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                        Intent i = new Intent(getBaseContext(), CadastroActivity.class);
-                        startActivity(i);
-
-                    }
-                });
+                Intent i = new Intent(getBaseContext(), CadastroActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 }

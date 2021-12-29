@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -70,7 +71,6 @@ public class CadastroActivity extends AppCompatActivity {
                    Cliente.cadastrar(clienteNovo);
                     Intent i = new Intent(getBaseContext(), ProfileActivity.class);
                     startActivity(i);
-
                 }
             }
         });
@@ -153,5 +153,4 @@ public class CadastroActivity extends AppCompatActivity {
         }
         return true;
     }
-
 }

@@ -52,7 +52,7 @@
             android:layout_marginEnd="12dp"
             android:background="@drawable/custom_edit_text"
             android:ems="10"
-            android:hint="@string/dura_o"
+            android:hint="@string/duracao"
             android:importantForAutofill="no"
             android:inputType="time"
             android:textColorHint="@color/grey2"
