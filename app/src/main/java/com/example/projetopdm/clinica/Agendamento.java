@@ -1,8 +1,8 @@
 package com.example.projetopdm.clinica;
 
-import static com.example.projetopdm.clinica.Agenda.usuarios;
+//import static com.example.projetopdm.clinica.Agenda.usuarios;
 
-import com.example.projetopdm.usuarios.Cliente;
+//import com.example.projetopdm.usuarios.Cliente;
 
 public class Agendamento {
     public String horario;
@@ -123,7 +123,7 @@ public class Agendamento {
         //No fragment AgendamentosFragment tem o botaozinho de deletar, tem que dar delete no banco
     }
 
-    public String getHorario() {
+    /*public String getHorario() {
         return horario;
     }
 
@@ -153,6 +153,6 @@ public class Agendamento {
 
     public void setHorario(String horario) {
         this.horario = horario;
-    }
+    }*/
 
 }
