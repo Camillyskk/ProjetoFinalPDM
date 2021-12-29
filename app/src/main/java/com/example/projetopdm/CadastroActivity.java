@@ -115,7 +115,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     public static boolean validarRG(EditText editText){
         String rg = editText.getText().toString();
-        if(!rg.matches("\\d")|| rg.length()<5){
+        if(rg.length()<6){
             editText.setError("Digite um número de RG válido.");
             return false;
         }
@@ -124,7 +124,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     public static boolean validarCPF(EditText editText){
         String cpf = editText.getText().toString();
-        if(!cpf.matches("\\d")|| cpf.length()<11){
+        if(cpf.length()<11){
             editText.setError("Digite um número de CPF válido e sem os pontos.");
             return false;
         }

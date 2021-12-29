@@ -5,14 +5,9 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
-import com.google.android.material.snackbar.Snackbar;
-
 public class DadosOpenHelper extends SQLiteOpenHelper {
 
-    public DadosOpenHelper(@Nullable Context context) {
+    public DadosOpenHelper(Context context) {
         super(context, "db_clinica", null, 1);
     }
 
